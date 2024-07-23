@@ -3,7 +3,7 @@
 **1. Save the SAS Log to a file**
 ```sas
 *  1. Save the SAS Log to a file ;
-filename logfile '/workspaces/workspace/logfile.txt' ;
+filename logfile '/workspaces/korand/logfile.txt' ;
 proc printto log = logfile ; run ;
 proc setinit; run ;
 proc printto ; run ;
@@ -13,7 +13,7 @@ proc printto ; run ;
 ```sas
 * 2. Read the log file and extract ACCESS information ;
 data log_data ;
-    infile '/workspaces/workspace/logfile.txt' truncover ;
+    infile '/workspaces/korand/logfile.txt' truncover ;
     input Workbench_SAS_Access_Info $char200. ;
     if index(upcase(Workbench_SAS_Access_Info), 'ACCESS') > 0 ;
 run ;
