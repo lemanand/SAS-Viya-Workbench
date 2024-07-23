@@ -22,8 +22,7 @@ run ;
 **3. Display ACCESS filtered result**
 ```sas
 * 3. Display ACCESS filtered result ;
-proc print data = log_data noobs ;
-run ;
+proc print data = log_data ; run ;
 ```
 
 **4. Delete created dataset and log file**
